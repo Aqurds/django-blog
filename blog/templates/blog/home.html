@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+
+    {% for post in posts %}
+
+        <h1>{{post.title}}</h1>
+
+        <p>Author: {{post.author}}, Posted at {{post.date_posted | date:"F d, Y"}}</p>
+
+        <p>{{post.content}}</p>
+
+    {% endfor %}
+
+    <p id="customp">Hello main css</p>
+
+{% endblock content %}
